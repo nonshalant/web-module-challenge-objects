@@ -54,7 +54,7 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  discount(string){
+  discount: function(string){
     if(string === 'teacher' || string === 'student'){
       this.price = (this.price * .25) - 18;
       return this.price;
@@ -108,9 +108,15 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
+function addReview(array, name, rating, feedback){
   /*Your Code Here */
+const newObj = {name, rating, feedback,}
+  array.push(newAbj)
+  return array;
 }
+
+
+console.log(addReview('array', 'Daniela', 5, 'Beautiful atmosphere and wonderful vegan options!'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -123,8 +129,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  return ` ${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feed was: ${array[index].feedback}`; 
 }
 
 
@@ -142,8 +148,8 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  `${array[array.length - 1].name)} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length - 1].feedback}`
 } 
 
 
